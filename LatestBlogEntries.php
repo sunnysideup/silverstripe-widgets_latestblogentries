@@ -7,35 +7,27 @@
  */
 class LatestBlogEntries extends Widget {
 
-	static $db = array(
-		'NumberOfItems' => 'Int'
+	private static $db = array(
+		'NumberOfItems' => 'Int',
+		'OnlyFromThisPage' => 'Boolean'
 	);
-	static $has_one = array();
-
-	static $has_many = array();
-
-	static $many_many = array();
-
-	static $belongs_many_many = array();
-
-	static $defaults = array(
+	private static $defaults = array(
 		'NumberOfItems' => 7
 	);
 
-	static $title = 'Latest Blog Entries';
+	private static $title = 'Latest Blog Entries';
 
-	static $cmsTitle = 'Latest Blog Entries';
+	private static $cmsTitle = 'Latest Blog Entries';
 
-	static $description = 'Show a list of latest blog entries.';
+	private static $description = 'Show a list of latest blog entries.';
 
 	function getCMSFields() {
-		return new FieldSet(
+		return new FieldList(
 			new NumericField("NumberOfItems","Number Of Items Shown")
 		);
 	}
 
 	function Links() {
-		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
 		Requirements::themedCSS("widgets_latestblogentries");
 		return DataObject::get("BlogEntry", null, "{$bt}Created{$bt} DESC", null, $this->NumberOfItems);
 	}
