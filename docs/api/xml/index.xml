@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/widgets_latestblogentries/trunk">
+  <namespace name="">
+    <class name="LatestBlogEntries" src="LatestBlogEntries.php" description="Shows a widget with viewing blog entries by months or years." xml="classes/LatestBlogEntries.xml"/>
+  </namespace>
+</index>
