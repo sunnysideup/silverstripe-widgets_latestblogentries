@@ -28,8 +28,8 @@ class LatestBlogEntries extends Widget {
 	}
 
 	function Links() {
-		Requirements::themedCSS("widgets_latestblogentries");
-		return DataObject::get("BlogEntry", null, "{$bt}Created{$bt} DESC", null, $this->NumberOfItems);
+		Requirements::themedCSS("widgets_latestblogentries", "widgets_latestblogentries");
+		return BlogEntry::get()->sort(array("Created" => "DESC"))->limit($this->NumberOfItems);
 	}
 
 }
