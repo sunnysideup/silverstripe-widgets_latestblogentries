@@ -27,9 +27,9 @@ class LatestBlogEntries extends Widget {
 		);
 	}
 
-	function Links() {
+	function WidgetBlogEntries() {
 		Requirements::themedCSS("widgets_latestblogentries", "widgets_latestblogentries");
-		return BlogEntry::get()->sort(array("Created" => "DESC"))->limit($this->NumberOfItems);
+		return BlogEntry::get()->filter(array("ShowInSearch" => 1))->sort(array("Created" => "DESC"))->limit($this->NumberOfItems+1);
 	}
 
 }
