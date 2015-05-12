@@ -1,5 +1,5 @@
 <% if WidgetBlogEntries %>
-<ul class="LatestBlogEntries">
+<ul class="latestBlogEntries">
 	<% loop WidgetBlogEntries %>
 		<li><a class="$LinkOrSection $FirstLast" href="$Link"><span>$MenuTitle</span></a></li>
 	<% end_loop %>
