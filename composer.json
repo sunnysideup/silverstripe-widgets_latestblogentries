@@ -3,8 +3,10 @@
     "type": "silverstripe-module",
     "description": "",
     "keywords": [
-        "widgets_latestblogentries",
-        "silverstripe"
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
+        "widgets_latestblogentries"
     ],
     "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
     "authors": [
